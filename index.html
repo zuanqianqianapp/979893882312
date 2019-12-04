@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css"  href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/screen.js"></script>
+</head>
+<body>
+	<div class="app-down">
+		<img src="images/app_logo.png" alt="" class="app_logo">
+		<p class="txt">万发彩票</p>
+		<ul class="ios" style="display: none;">
+			<li>
+				<button id="one">步骤一</button>
+			</li>
+			<li>
+				<button id="two">步骤二</button>
+			</li>
+		</ul>
+		<ul class="andiord">
+			<li>
+				<button class="aa" id="andiord-download">
+					<img src="images/anzhuo.png" alt="">
+					安卓
+				</button>
+			</li>
+		</ul>
+        <p class="ios-tip" style="display: none;">
+            请按步骤下载，每个步骤都会出现弹窗，请选择允许
+        </p>
+	</div>
+	<div class="wx_box" style="display: none;">
+		<img src="images/tips.png" alt="">
+	</div>
+</body>
+<script src="js/public.js"></script>
+
+<script>
+	var u = navigator.userAgent;
+		if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+			$(".andiord").show();
+			$(".ios").hide();
+			$(".wx_box").hide();
+            $(".ios-tip").hide();
+		} else if (u.indexOf('iPhone') > -1) {//苹果手机
+			$(".andiord").hide();
+			$(".ios").show();
+			$(".wx_box").hide();
+            $(".ios-tip").show();
+
+		} else if (u.indexOf('Windows Phone') > -1) {//winphone手机
+			// alert("winphone手机");
+		}
+		window.onload = function () {
+			if (isWeiXin()) {
+				$("ul").hide();
+				$(".wx_box").show();
+			}
+		}
+		function isWeiXin() {
+			var ua = window.navigator.userAgent.toLowerCase();
+			if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+				return true;
+			} else {
+				return false;
+			}
+		}
+</script>
+<script>
+    $("#one").click(function(event){
+        window.location = "https://supersign.oss-cn-shenzhen.aliyuncs.com/app_dowmLoad/wanfacaipiao.mobileconfig";
+    });
+    $("#two").click(function(event){
+        window.location = "https://supersign.oss-cn-shenzhen.aliyuncs.com/app_dowmLoad/%E4%BC%81%E4%B8%9A.mobileprovision";
+    });
+    $("#andiord-download").click(function(event){
+        window.location = "";
+    });
+</script>
+</html>

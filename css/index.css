@@ -1,0 +1,73 @@
+body{
+    height: 100vh;
+    padding-top: 2rem;
+    background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+}
+.app-down ul{margin-top: 2rem;}
+.app-down ul li{
+    margin:35px auto;
+   
+    
+}
+button:focus{
+    outline: none;
+}
+.app-down ul li a img{width: 15px;height: 15px;}
+.app-down ul li button{
+    font-size: .32rem;
+    color: #fff;
+    margin-left: 10px;
+    border: 0;
+    background: transparent;
+    border: 2px solid #eee;
+    padding: 12px 0;
+    width: 250px;
+    border-radius: 40px;
+    display: block;
+    margin: auto;
+}
+.app_logo{
+    width: 2rem;
+    margin: auto;
+    border-radius: 23px;
+}
+
+.txt{
+    font-size: .3rem;
+    color: #fff;
+    text-align: center;
+    margin-top: .13rem;
+}
+.ios-tip{
+    font-size: .3rem;
+    color: #fff;
+    text-align: center;
+    margin-top: .13rem;
+}
+
+.wx_box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.65);
+}
+
+.wx_box img{
+    width: 5.65rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.aa{
+    position: relative;
+}
+.aa img{
+    width: .5rem;
+    position: absolute;
+    left:1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
